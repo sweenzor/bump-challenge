@@ -12,7 +12,7 @@ def main(argv):
     while line:
       if line.split(' ')[2]=="MATCH":
         dict1 = json.loads(line[28:])
-        print "LongValueSum:" + dict1['userid1'] + "\t" + "1"
+        print "LongValueSum:" + str(dict1['userid1']) + "\t" + "1"
         #print "LongValueSum:" + dict1['userid2'] + "\t" + "1"
       line = sys.stdin.readline()
   except "end of file":
