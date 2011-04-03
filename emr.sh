@@ -1,5 +1,5 @@
 ./elastic-mapreduce-ruby/elastic-mapreduce --create --stream \
-     --mapper  s3://elasticmapreduce/samples/wordcount/wordSplitter.py \
-     --input   s3://elasticmapreduce/samples/wordcount/input \
-     --output  s3://bumpmap/log \
+     --mapper  s3://bumpmap/bump-json.py \
+     --input   s3://bumpmap/bumpdata.log \
+     --output  s3://bumpmap/log1 \
      --reducer aggregate
