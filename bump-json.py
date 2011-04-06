@@ -16,7 +16,7 @@ def main(argv):
         dict2 = {}
         dict2.update(extract(dict1,['userid1','userid2']))
         dict2['head'] = 'MATCH'
-        print dict2
+        print json.dumps(dict2, sort_keys=True)
         
         #dict3 = {}
         #dict3['userid1'] = dict1['userid2']
@@ -31,7 +31,7 @@ def main(argv):
         dict2.update(extract(dict1,['userid']))
         dict2.update(extract(dict1['app_version'],['platform']))
         dict2['head'] = 'HELLO'
-        print dict2
+        print json.dumps(dict2, sort_keys=True)
 
       line = sys.stdin.readline()
 

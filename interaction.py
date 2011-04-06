@@ -1,11 +1,11 @@
 import subprocess
 
-logs = open('bump10.log')
+logs = open('postmap.log')
 lines = logs.readlines()
 
 
 for i in lines:
-    proc = subprocess.Popen('python bump-json.py', 
+    proc = subprocess.Popen('python bump-reducer.py', 
                             shell=True,
                             stdin=subprocess.PIPE,
                             stdout=subprocess.PIPE,
