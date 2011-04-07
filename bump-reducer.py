@@ -35,9 +35,10 @@ def main(argv):
     pass
   
   for uid in count:
-    print uid, '\t',len(count[uid]['matches'])
-  print count
-
+    if 'platform' in count[uid]:
+      print uid, '\t',len(count[uid]['matches']), '\t', count[uid]['platform']
+    else:
+      print uid, '\t',len(count[uid]['matches']), '\t'
 
 if __name__ == "__main__":
   main(sys.argv)
