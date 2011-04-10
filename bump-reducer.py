@@ -36,9 +36,11 @@ def main(argv):
   
   for uid in count:
     if 'platform' in count[uid]:
-      print uid, '\t',len(count[uid]['matches']), '\t', count[uid]['platform']
+      out = str(uid)+'\t'+str(len(count[uid]['matches']))+'\t'+count[uid]['platform']+'\n'
+      sys.stdout.write(out)
     else:
-      print uid, '\t',len(count[uid]['matches']), '\t'
+      out = str(uid)+'\t'+str(len(count[uid]['matches']))+'\n'
+      sys.stdout.write(out)
 
 if __name__ == "__main__":
   main(sys.argv)
