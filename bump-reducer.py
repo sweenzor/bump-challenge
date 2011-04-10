@@ -36,7 +36,7 @@ def main(argv):
   
   for uid in count:
     if 'platform' in count[uid]:
-      out = str(uid)+'\t'+str(len(count[uid]['matches']))+'\t'+count[uid]['platform']+'\n'
+      out = str(uid)+'\t'+count[uid]['platform']+'\n'
       sys.stdout.write(out)
     else:
       out = str(uid)+'\t'+str(len(count[uid]['matches']))+'\n'

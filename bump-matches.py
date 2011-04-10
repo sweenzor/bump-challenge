@@ -21,14 +21,14 @@ def main(argv):
         sys.stdout.write(json.dumps(dict2, sort_keys=True)+'\n')
         
 
-      if line.split(' ')[2]=="HELLO":
-        dict1 = json.loads(line[28:])
-        dict2 = {}
-        dict2.update(extract(dict1,['userid']))
-        dict2.update(extract(dict1['app_version'],['platform']))
-        dict2['head'] = 'HELLO'
+      #if line.split(' ')[2]=="HELLO":
+        #dict1 = json.loads(line[28:])
+        #dict2 = {}
+        #dict2.update(extract(dict1,['userid']))
+        #dict2.update(extract(dict1['app_version'],['platform']))
+        #dict2['head'] = 'HELLO'
 
-        sys.stdout.write(json.dumps(dict2, sort_keys=True)+'\n')
+        #sys.stdout.write(json.dumps(dict2, sort_keys=True)+'\n')
 
       line = sys.stdin.readline()
 
