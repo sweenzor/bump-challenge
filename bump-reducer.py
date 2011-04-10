@@ -25,10 +25,10 @@ def main(argv):
       
       if dict1['head'] == "HELLO":
         id1 = dict1['userid']  
-        try:
+        if id1 in count:
           count[id1]['platform'] = dict1['platform']
-        except:
-          pass       
+        else:
+          count[id1] = {'platform':dict1['platform']}       
  
       line = sys.stdin.readline()
   except:

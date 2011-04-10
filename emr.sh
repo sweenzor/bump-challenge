@@ -1,5 +1,5 @@
 #!/bin/bash
-log="log1"
+log="log2"
 
 ./elastic-mapreduce-ruby/elastic-mapreduce --create --stream \
      --num-instances 1 \
