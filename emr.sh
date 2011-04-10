@@ -2,7 +2,7 @@
 
 ./elastic-mapreduce-ruby/elastic-mapreduce --create --stream \
      --num-instances 1 \
-     --master-instance-type m1.xlarge \
+     --master-instance-type m1.micro \
      --mapper  s3://bumpmap/bump-matches.py \
      --input   s3://bumpmap/bumpdata.log \
      --output  s3://bumpmap/bump-matches \

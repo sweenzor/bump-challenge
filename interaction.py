@@ -1,6 +1,6 @@
 import subprocess
 
-logs = open('postmap2.log')
+logs = open('platformlog.log')
 lines = logs.readlines()
 logs.close()
 
@@ -13,7 +13,7 @@ proc = subprocess.Popen('python bump-reducer.py',
 #print '\n'.join(lines)
 #(out, err) = proc.communicate('\n'.join(lines))
 
-proc.stdin.writelines(lines[0:3500] + ["\n"])
+proc.stdin.writelines(lines[0:3000] + ["\n"])
 out = proc.stdout.read()
 print out
 
