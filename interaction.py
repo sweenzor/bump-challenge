@@ -1,12 +1,10 @@
 import subprocess
 
-logs = open('bump1.log')
+logs = open('postmap2.log')
 lines = logs.readlines()
 logs.close()
 
-print len(lines)
-
-proc = subprocess.Popen('python bump-json.py', 
+proc = subprocess.Popen('python bump-reducer.py', 
                         shell=True,
                         stdin=subprocess.PIPE,
                         stdout=subprocess.PIPE,
@@ -15,7 +13,7 @@ proc = subprocess.Popen('python bump-json.py',
 #print '\n'.join(lines)
 #(out, err) = proc.communicate('\n'.join(lines))
 
-proc.stdin.writelines(lines[0:10] + ["\n"])
+proc.stdin.writelines(lines[0:3500] + ["\n"])
 out = proc.stdout.read()
 print out
 
