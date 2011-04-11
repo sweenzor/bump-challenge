@@ -23,13 +23,14 @@ def main(argv):
         else:
           count[id2] = {'matches':{id1:1}}
       
-      if dict1['head'] == "HELLO":
-        id1 = dict1['userid']  
-        if id1 in count:
-          pass
+      #if dict1['head'] == "HELLO":
+        #pass
+        #id1 = dict1['userid']  
+        #if id1 in count:
+          #pass
           #count[id1]['platform'] = dict1['platform']
-        else:
-          count[id1] = {'platform':dict1['platform']}       
+        #else:
+          #count[id1] = {'platform':dict1['platform']}       
  
       line = sys.stdin.readline()
   except:

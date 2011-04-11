@@ -1,10 +1,10 @@
 import subprocess
 
-logs = open('platformlog.log')
+logs = open('plat.log')
 lines = logs.readlines()
 logs.close()
 
-proc = subprocess.Popen('python bump-reducer.py', 
+proc = subprocess.Popen('python bump-platform-reduce.py', 
                         shell=True,
                         stdin=subprocess.PIPE,
                         stdout=subprocess.PIPE,
